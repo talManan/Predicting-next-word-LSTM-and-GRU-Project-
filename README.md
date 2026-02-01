@@ -1,167 +1,92 @@
 # Predicting-next-word-LSTM-and-GRU-Project-
 
-PROJECT OVERVIEW
 
-This project focuses on building an end-to-end Natural Language Processing (NLP) system that predicts the next word in a given text sequence using Recurrent Neural Networks (RNNs).
-The models used are LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit), which are well-suited for sequential and language-based tasks.
+# Next Word Prediction using LSTM & GRU
 
-The project demonstrates the complete workflow:
-problem understanding, data preprocessing, model training, prediction, and web app deployment.
+An end-to-end Deep Learning project that predicts the **next word in a sentence**
+using **LSTM and GRU neural networks**, with a real-time **Streamlit web app**.
 
-PROBLEM STATEMENT
+---
 
-Given a sequence of words, the goal is to predict the most likely next word based on learned patterns from text data.
+##  Project Overview
 
-Example:
-Input : "machine learning is"
-Output : "powerful"
+This project demonstrates how Recurrent Neural Networks can be used for
+Natural Language Processing tasks like next-word prediction.
 
-MODELS USED
+The complete pipeline includes:
+- Data preprocessing
+- Model training (LSTM & GRU)
+- Prediction logic
+- Web app deployment using Streamlit
 
-LSTM (Long Short-Term Memory)
+---
 
-Handles long-term dependencies
+##  Problem Statement
 
-Solves vanishing gradient problem
+Given a sequence of words, predict the most likely next word.
 
-Suitable for text and sequence data
+**Example:**
+Input : deep learning is
+Output : powerful
 
-GRU (Gated Recurrent Unit)
 
-Lightweight alternative to LSTM
+---
 
-Faster training
+##  Models Used
 
-Comparable performance for sequence tasks
+- **LSTM (Long Short-Term Memory)**
+- **GRU (Gated Recurrent Unit)**
 
-PROJECT STRUCTURE
+Both models handle sequential data and long-term dependencies effectively.
 
-next-word-prediction/
-│
-├── data/
-│ └── corpus.txt
-│
-├── notebooks/
-│ ├── data_preprocessing.ipynb
-│ ├── lstm_model_training.ipynb
-│ └── gru_model_training.ipynb
-│
-├── models/
-│ ├── lstm_model.h5
-│ └── gru_model.h5
-│
-├── app.py
-├── requirements.txt
-└── README.txt
+---
 
-DATA COLLECTION AND PREPROCESSING
+##  Web Application
 
-Text data is collected from a corpus file
+- Built using **Streamlit**
+- User enters a text sentence
+- Model predicts the next word in real-time
+- Supports both **LSTM** and **GRU** models
 
-All text is converted to lowercase
+---
 
-Tokenization is performed using a tokenizer
+##  How to Run the Project
 
-Input sequences are generated using n-grams
+1. Clone the repository
+git clone <repository-url>
+cd next-word-prediction
 
-Padding is applied to ensure equal sequence length
-
-Output labels are one-hot encoded
-
-MODEL TRAINING
-
-LSTM Model:
-
-Embedding Layer
-
-LSTM Layer
-
-Dense Output Layer with Softmax
-
-Loss Function: Categorical Crossentropy
-
-Optimizer: Adam
-
-GRU Model:
-
-Embedding Layer
-
-GRU Layer
-
-Dense Output Layer with Softmax
-
-Loss Function: Categorical Crossentropy
-
-Optimizer: Adam
-
-PREDICTION WORKFLOW
-
-User provides an input text sequence
-
-Text is tokenized and padded
-
-Model predicts probability distribution of next words
-
-Word with highest probability is selected
-
-Predicted word is appended to input sequence
-
-WEB APPLICATION
-
-Built using Streamlit
-
-User enters a text sentence
-
-Model predicts the next word in real-time
-
-Supports both LSTM and GRU models
-
-HOW TO RUN THE PROJECT
-
-Clone the repository
-
-Install dependencies using:
+2. Install dependencies
 pip install -r requirements.txt
 
-Run the Streamlit app:
+3. Run the Streamlit app
 streamlit run app.py
 
-Enter a sentence and get next-word predictions
 
-LIBRARIES USED
+4. Enter a sentence and get next-word predictions
 
-Python
+---
 
-NumPy
+##  Libraries Used
 
-Pandas
+- Python
+- NumPy
+- Pandas
+- TensorFlow / Keras
+- Streamlit
+- Scikit-learn
 
-TensorFlow / Keras
+---
 
-Streamlit
+##  Future Improvements
 
-Scikit-learn
+- Train on larger datasets
+- Add beam search for better predictions
+- Implement Transformer-based models
+- Improve UI and model selection
 
-APPLICATIONS
+---
 
-Text auto-completion
 
-Chatbots
 
-Language modeling
 
-Search engines
-
-AI writing assistants
-
-FUTURE IMPROVEMENTS
-
-Use larger datasets
-
-Add Beam Search for better predictions
-
-Train Transformer-based models
-
-Improve UI and model selection
-
-Add multi-word prediction
